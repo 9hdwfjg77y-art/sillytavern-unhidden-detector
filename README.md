@@ -1,0 +1,1 @@
+# sillytavern-unhidden-detector
