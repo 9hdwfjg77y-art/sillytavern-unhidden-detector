@@ -1,0 +1,107 @@
+/* Независимая панель справа снизу */
+#stuh-panel {
+    position: fixed;
+    right: 12px;
+    bottom: 100px;
+    z-index: 1000;
+
+    width: 235px;
+    max-width: calc(100vw - 24px);
+    box-sizing: border-box;
+
+    color: var(--SmartThemeBodyColor, #eeeeee);
+    background: var(--SmartThemeBlurTintColor, #252525);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid
+        var(--SmartThemeBorderColor, #777777);
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+#stuh-panel summary {
+    padding: 9px 11px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+}
+
+#stuh-panel .stuh-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 11px 11px;
+}
+
+#stuh-panel .stuh-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+#stuh-panel button {
+    width: 48px;
+    min-height: 34px;
+    margin: 0;
+    padding: 3px 10px;
+
+    color: inherit;
+    background: rgba(128, 128, 128, 0.15);
+    border: 1px solid
+        var(--SmartThemeBorderColor, #777777);
+    border-radius: 7px;
+
+    font: inherit;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#stuh-panel button:hover {
+    background: rgba(128, 128, 128, 0.3);
+}
+
+#stuh-panel button:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+#stuh-panel .stuh-position {
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+#stuh-panel .stuh-label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0;
+    cursor: pointer;
+}
+
+#stuh-panel .stuh-label input {
+    width: auto;
+    margin: 0;
+}
+
+#stuh-panel .stuh-note {
+    font-size: 12px;
+    opacity: 0.75;
+}
+
+/* Общая подсветка нескрытых сообщений */
+#chat .mes.stuh-unhidden {
+    outline: 1px dashed #d7aa55 !important;
+    outline-offset: -2px;
+}
+
+/* Сообщение, к которому перешли стрелкой */
+#chat .mes.stuh-current {
+    outline: 3px solid #f2b85b !important;
+    outline-offset: -3px;
+}
